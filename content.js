@@ -225,6 +225,7 @@ function applySettings(data, refresh) {
         seznam.children[0].remove()
     }
 
+    console.log(data)
     for(let i = 0; i < data.length; i++){
 
         let li = document.createElement("LI")
@@ -356,7 +357,7 @@ function loadInitialData() {
 function moveSubject(index, direction){
     chrome.storage.sync.get("FRIpredmetiSubjects", function (data){
         //1 - down, -1 - up
-        if(index === data.FRIpredmetiSubjects.length && direction === 1){
+        if(index === data.FRIpredmetiSubjects.length - 1 && direction === 1){
             return;
         }
         else if(index === 0 && direction === -1){
