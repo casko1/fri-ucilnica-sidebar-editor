@@ -1,0 +1,19 @@
+{
+  "name": "FRIpredmeti",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://ucilnica.fri.uni-lj.si/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Uredi predmete"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
