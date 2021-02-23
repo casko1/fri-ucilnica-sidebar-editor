@@ -225,7 +225,6 @@ function applySettings(data, refresh) {
         seznam.children[0].remove()
     }
 
-    console.log(data)
     for(let i = 0; i < data.length; i++){
 
         let li = document.createElement("LI")
